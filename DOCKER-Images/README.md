@@ -1,5 +1,5 @@
 <pre>
-***TomCat Container***
+<h2>TomCat Container<h2>
 [mahsan@dockerce ~]$ docker pull tomcat
 Using default tag: latest
 latest: Pulling from library/tomcat
@@ -158,4 +158,5 @@ COPY ./*.war /usr/local/tomcat/webapps
 ![Alt text](https://github.com/4msahsan/DevOps/blob/main/DOCKER-Images/png/08.png "msahsan@hotmail.com")
 ![Alt text](https://github.com/4msahsan/DevOps/blob/main/DOCKER-Images/png/09.png "msahsan@hotmail.com")
 ![Alt text](https://github.com/4msahsan/DevOps/blob/main/DOCKER-Images/png/10.png "msahsan@hotmail.com")
- 
+![Alt text](https://github.com/4msahsan/DevOps/blob/main/DOCKER-Images/png/11.png "msahsan@hotmail.com")
+![Alt text](https://github.com/4msahsan/DevOps/blob/main/DOCKER-Images/png/12.png "msahsan@hotmail.com")
