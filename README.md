@@ -1,4 +1,4 @@
-`#0969DA`
-*CICD PIPE LINE in DOCKER ANSIBLE AND KUBERNETES*
+<h1> CI/CD </h1>
 
-This site was built using [GitHub Pages](https://github.com/4msahsan/DevOps/tree/main/DOCKER-Images).
+
+**Build CI/CD pipeline using Docker and Jenkins  [GitHub Pages](https://github.com/4msahsan/DevOps/tree/main/DOCKER-Images).
