@@ -1,5 +1,5 @@
 <pre>
-<h2>TomCat Container<h2>
+<h2>TomCat Container</h2>
 [mahsan@dockerce ~]$ docker pull tomcat
 Using default tag: latest
 latest: Pulling from library/tomcat
