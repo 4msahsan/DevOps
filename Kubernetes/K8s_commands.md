@@ -207,5 +207,99 @@ demo-service   NodePort    10.152.183.106   <none>        80:30007/TCP   37s
 [root@microk8s YML]#
 
 
+
+[root@microk8s YML]# kk describe svc demo-service
+Name:                     demo-service
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 <none>
+Type:                     NodePort
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.152.183.106
+IPs:                      10.152.183.106
+Port:                     nginx-port  80/TCP
+TargetPort:               80/TCP
+NodePort:                 nginx-port  30007/TCP
+Endpoints:                <none>
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+[root@microk8s YML]#
+
+[root@microk8s YML]# kk get svc
+NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.152.183.1   <none>        443/TCP   12h
+[root@microk8s YML]# ll
+total 8
+-rw-r--r-- 1 root root 207 Feb  4 21:46 pod.yml
+-rw-r--r-- 1 root root 212 Feb  4 23:23 service.yml
+[root@microk8s YML]# kk apply -f service.yml
+service/demo-service created
+[root@microk8s YML]# kk get svc
+NAME           TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+kubernetes     ClusterIP   10.152.183.1     <none>        443/TCP        12h
+demo-service   NodePort    10.152.183.241   <none>        80:30007/TCP   3s
+[root@microk8s YML]# kk describe svc demo-service
+Name:                     demo-service
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=demo-app
+Type:                     NodePort
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.152.183.241
+IPs:                      10.152.183.241
+Port:                     nginx-port  80/TCP
+TargetPort:               80/TCP
+NodePort:                 nginx-port  30007/TCP
+Endpoints:                10.1.128.200:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+[root@microk8s YML]# curl 10.1.128.200:80
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+[root@microk8s YML]# cat service.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-service
+spec:
+  type: NodePort
+  ports:
+  - name: nginx-port
+    port: 80
+    targetPort: 80
+    nodePort: 30007
+  selector:
+    app: demo-app
+
+
+[root@microk8s YML]#
+
 </pre>
 
