@@ -140,7 +140,6 @@ total 24
 
 </pre>
 
-![Alt text](https://github.com/4msahsan/DevOps/blob/main/Ansible/png/01.png "msahsan@hotmail.com")
 ![Alt text](https://github.com/4msahsan/DevOps/blob/main/Ansible/png/02.png "msahsan@hotmail.com")
 ![Alt text](https://github.com/4msahsan/DevOps/blob/main/Ansible/png/03.png "msahsan@hotmail.com")
 ![Alt text](https://github.com/4msahsan/DevOps/blob/main/Ansible/png/04.png "msahsan@hotmail.com")
