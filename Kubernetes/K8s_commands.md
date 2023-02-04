@@ -1,4 +1,6 @@
 <pre>
+<h1> Kubernetes Commands </h1>
+
 [root@microk8s ~]# dnf install epel-release
 
 root@microk8s ~]# dnf --enablerepo=epel -y install snapd
@@ -69,7 +71,7 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
 </style>
 </head>
 <body>
-<h1>Welcome to nginx!</h1>
+Welcome to nginx!
 <p>If you see this page, the nginx web server is successfully installed and
 working. Further configuration is required.</p>
 
