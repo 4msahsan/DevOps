@@ -17,7 +17,6 @@ changed: [192.168.0.147]
 
 PLAY RECAP ****************************************************************************************************************************
 192.168.0.147              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-<sub>
 [ansadmin@ansible docker]$ docker images
 REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
 regapp       latest    27e8886cc51d   39 minutes ago   478MB
@@ -38,7 +37,6 @@ COPY ./*.war /usr/local/tomcat/webapps
      chdir: /opt/docker
 [ansadmin@ansible docker]$
 
-</sub>
 
 [ansadmin@ansible docker]$ docker images
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
