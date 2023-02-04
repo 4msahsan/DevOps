@@ -283,6 +283,24 @@ Commercial support is available at
 <p><em>Thank you for using nginx.</em></p>
 </body>
 </html>
+
+[root@microk8s YML]# cat pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pad
+<b> labels:
+    app: demo-app </b>
+spec:
+  containers:
+  - name: demo-nginx
+    image: nginx
+    ports:
+      - name: demo-nginx
+        containerPort: 80
+
+
+
 [root@microk8s YML]# cat service.yml
 apiVersion: v1
 kind: Service
@@ -295,9 +313,9 @@ spec:
     port: 80
     targetPort: 80
     nodePort: 30007
-  selector:
+<b> selector:
     app: demo-app
-
+</b>
 
 [root@microk8s YML]#
 
