@@ -1,0 +1,11 @@
+---
+- hosts: microk8s
+  user: root
+  #become: true
+
+
+  tasks:
+  - name: deploy regapp on k8s
+    command: microk8s  kubectl apply -f regapp-deployment.yml
+
+
